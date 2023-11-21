@@ -1,3 +1,5 @@
+import Footer from "@/components/footer/Footer";
+import Navber from "@/components/navber/Navber";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -20,7 +22,12 @@ export default function RootLayout({
       <body
         className={cn("relative h-full font-sans antialiased", inter.className)}
       >
-        <main className="relative flex flex-col min-h-screen">{children}</main>
+        <main className="relative flex flex-col min-h-screen">
+          <Navber />
+          <div>{children}</div>
+
+          <Footer />
+        </main>
       </body>
     </html>
   );
